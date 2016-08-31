@@ -10,10 +10,15 @@ Supports the OAuth 2.0 server-side and client-side flows.
 
 ## Installing
 
-Add to your `Gemfile`:
 
+```bash
+git clone https://github.com/harshaa947/omniauth-iitd.git  
+cd omniauth-iitd  
+gem build omniauth-iitd.gemspec
+```
+Add to your `Gemfile`:
 ```ruby
-gem 'omniauth-iitd'
+gem 'omniauth-iitd' , :path => 'your path'
 ```
 
 Then `bundle install`.
@@ -54,17 +59,6 @@ use OmniAuth::Builder do
     }
 end
 ```
-## Manually adding to the application 
-
-Run following commands -  
-git clone https://github.com/harshaa947/omniauth-iitd.git  
-cd omniauth-iitd  
-gem build omniauth-iitd.gemspec
-
-Add a line to your Gemfile  
-gem 'omniauth-iitd' , path => 'your path'
-
-bundle install.
 
 ## License
 
