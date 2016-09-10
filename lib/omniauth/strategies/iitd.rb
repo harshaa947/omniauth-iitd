@@ -48,7 +48,6 @@ module OmniAuth
                         ri = MultiJson.decode(access_token.get("https://oauth.iitd.ac.in/resource.php?access_token=#{access_token.token}").body)
 			username = ri['user_id']
 			userd=getuser(username)
-			puts username
 			ri.merge!('email' => userd[1]['mail'].first )
                         ri.merge!('name' => userd[2]['username'].first ) 
 			ri.merge!('category' => userd[2]['category'].first ) 
@@ -71,7 +70,6 @@ def getuser(username)
      :attributes =>   [ "uid","username","mail","category"],
       :return_result => true
     	)
-	puts userd.inspect
 	userd
 end 
 
